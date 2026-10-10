@@ -11,10 +11,15 @@
     "index.server.tsx",
     "client/",
     "server/",
-    "shared/"
+    "shared/",
+    "docs/",
+    "assets/",
+    "scripts/",
+    "tsconfig.json"
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "pack": "node scripts/pack.mjs",
     "preview": "node scripts/preview.mjs"
   },
   "devDependencies": {
@@ -46,5 +51,16 @@
   "homepage": "https://github.com/YPQuinn/paseo-json-render#readme",
   "bugs": {
     "url": "https://github.com/YPQuinn/paseo-json-render/issues"
+  },
+  "keywords": [
+    "paseo",
+    "intelligent-ui",
+    "codex",
+    "claude-code",
+    "json-render"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

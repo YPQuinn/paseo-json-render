@@ -13,7 +13,7 @@
   <a href="https://paseo.sh"><img src="https://img.shields.io/badge/Paseo-0.11.2%2B-16a34a?style=flat-square" alt="Paseo 0.11.2 or later" /></a>
   <a href="docs/ui-protocol.md#components"><img src="https://img.shields.io/badge/UI-16_components-2563eb?style=flat-square" alt="16 UI components" /></a>
   <a href="docs/ui-protocol.md#progressive-specifications"><img src="https://img.shields.io/badge/Rendering-streaming-0f766e?style=flat-square" alt="Progressive streaming rendering" /></a>
-  <a href="package.json"><img src="https://img.shields.io/badge/Version-0.2.0-64748b?style=flat-square" alt="Version 0.2.0" /></a>
+  <a href="https://www.npmjs.com/package/paseo-json-render"><img src="https://img.shields.io/npm/v/paseo-json-render?style=flat-square&color=64748b" alt="npm version" /></a>
 </p>
 
 <p align="center">
@@ -47,14 +47,24 @@ Requirements:
 
 - Paseo **0.11.2 or later**, for both the app and the daemon.
 - Plugins enabled on the target daemon.
-- Git, Node.js, and npm available on the daemon host.
+- Node.js and npm available on the daemon host.
+- Git, if installing from GitHub.
+
+Install the npm release:
+
+```sh
+paseo plugin install npm:paseo-json-render@0.2.0
+paseo plugin ls
+```
+
+Or install from GitHub:
 
 ```sh
 paseo plugin add git:YPQuinn/paseo-json-render
 paseo plugin ls
 ```
 
-The plugin should report `running`. Paseo installs runtime dependencies from the committed lockfile and compiles the TypeScript entries.
+The plugin should report `running`. Paseo installs runtime dependencies and compiles the TypeScript entries. Git installations use the committed lockfile.
 
 On macOS, the desktop app bundles the CLI at `/Applications/Paseo.app/Contents/Resources/bin/paseo`. Use that path if `paseo` is not on your `PATH`. For a remote daemon, install on the daemon host.
 

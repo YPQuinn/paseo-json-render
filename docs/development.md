@@ -59,6 +59,7 @@ In Paseo, search for JSON Render in the Command Center and select the preview en
 | `client/preview.tsx`      | Provide the workspace and development previews.                                              |
 | `client/web.ts`           | Mount the browser-only development preview.                                                  |
 | `scripts/preview.mjs`     | Bundle, watch, and serve the preview.                                                        |
+| `scripts/pack.mjs`        | Prepare an npm tarball without changing the Git installation manifest.                       |
 
 ## Runtime boundaries
 
@@ -72,7 +73,19 @@ The manifest includes `build: [["npm", "ci", "--omit=dev"]]`. Git installations 
 
 Keep `OVERVIEW.md` next to `paseo-plugin.json`. It supplies the in-app plugin description and is required if the plugin is later submitted to the registry. GitHub publication alone does not create a registry listing.
 
-`package.json` remains `private` because this project is distributed through Git. A future npm release needs separate preparation, including removing the Git-only dependency installation command from the published manifest. See the [Paseo publishing guide](https://paseo.sh/docs/plugins/publishing).
+## npm distribution
+
+The checkout remains `private` to prevent direct publication of the Git manifest. Create the npm release artifact with:
+
+```sh
+npm run typecheck
+npm run pack
+npm publish ./dist/paseo-json-render-0.2.0.tgz --access public
+```
+
+The pack script uses npm's file selection, stages a copy, removes the Git-only `build` command and `private` flag, and converts README image and document links to public GitHub URLs. It writes the tarball to `dist/` and removes the temporary staging directory. The repository manifest keeps its Git preparation command.
+
+The npm tarball includes plugin source, the overview, documentation, development scripts, and the product poster. Paseo installs its production dependencies and compiles its TypeScript entries. See the [Paseo publishing guide](https://paseo.sh/docs/plugins/publishing).
 
 ## Validation
 
