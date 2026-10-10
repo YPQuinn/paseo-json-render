@@ -1,10 +1,35 @@
-# Paseo JSON Render
+<p align="center">
+  <img src="assets/readme-hero.png" alt="Paseo JSON Render product illustration: agent JSON output becomes an interactive task form and status card." width="100%" />
+</p>
 
-Interactive forms and dashboards inside [Paseo](https://paseo.sh) conversations, powered by Vercel's [json-render](https://github.com/vercel-labs/json-render).
+<h1 align="center">Paseo JSON Render</h1>
+
+<p align="center">
+  <strong>Agent output. Interactive UI.</strong><br />
+  Forms and dashboards inside your Paseo conversations.
+</p>
+
+<p align="center">
+  <a href="https://paseo.sh"><img src="https://img.shields.io/badge/Paseo-0.11.2%2B-16a34a?style=flat-square" alt="Paseo 0.11.2 or later" /></a>
+  <a href="docs/ui-protocol.md#components"><img src="https://img.shields.io/badge/UI-16_components-2563eb?style=flat-square" alt="16 UI components" /></a>
+  <a href="docs/ui-protocol.md#progressive-specifications"><img src="https://img.shields.io/badge/Rendering-streaming-0f766e?style=flat-square" alt="Progressive streaming rendering" /></a>
+  <a href="package.json"><img src="https://img.shields.io/badge/Version-0.2.0-64748b?style=flat-square" alt="Version 0.2.0" /></a>
+</p>
+
+<p align="center">
+  <a href="#install">Install</a> ·
+  <a href="#usage">Usage</a> ·
+  <a href="docs/ui-protocol.md">UI protocol</a> ·
+  <a href="docs/development.md">Development</a>
+</p>
+
+<p align="center">
+  Powered by <a href="https://github.com/vercel-labs/json-render">Vercel json-render</a> ·
+  Built for <a href="https://paseo.sh">Paseo</a><br />
+  <sub>The banner is a product illustration.</sub>
+</p>
 
 Agents describe an interface as JSON. The plugin renders it using React Native, and sends submitted form values back to the same agent so it can continue the task.
-
-[Install](#install) · [Usage](#usage) · [UI protocol](docs/ui-protocol.md) · [Development](docs/development.md)
 
 ## Features
 
