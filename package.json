@@ -1,0 +1,50 @@
+{
+  "name": "paseo-json-render",
+  "private": true,
+  "version": "0.2.0",
+  "files": [
+    "paseo-plugin.json",
+    "OVERVIEW.md",
+    "index.client.ts",
+    "index.client.tsx",
+    "index.server.ts",
+    "index.server.tsx",
+    "client/",
+    "server/",
+    "shared/"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "preview": "node scripts/preview.mjs"
+  },
+  "devDependencies": {
+    "@getpaseo/plugin": "0.11.2",
+    "@tanstack/react-query": "^5.90.11",
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^20.19.43",
+    "@types/react": "~19.2.0",
+    "@types/react-dom": "~19.1.0",
+    "esbuild": "^0.25.12",
+    "prettier": "^3.6.2",
+    "react": "19.1.0",
+    "react-dom": "^19.1.0",
+    "react-native": "0.81.5",
+    "react-native-web": "^0.21.2",
+    "typescript": "^5.9.3",
+    "zod": "^4.4.3"
+  },
+  "dependencies": {
+    "@json-render/core": "^0.21.0",
+    "@json-render/react-native": "^0.21.0",
+    "markdown-it": "^14.3.2"
+  },
+  "description": "Interactive forms and dashboards in Paseo conversations, powered by json-render",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YPQuinn/paseo-json-render.git"
+  },
+  "homepage": "https://github.com/YPQuinn/paseo-json-render#readme",
+  "bugs": {
+    "url": "https://github.com/YPQuinn/paseo-json-render/issues"
+  }
+}
