@@ -2,7 +2,7 @@
   "id": "paseo-json-render",
   "name": "JSON Render",
   "description": "Render agent output as interactive forms and dashboards",
-  "media": [],
+  "media": ["assets/preview-desktop.png", "assets/preview-mobile-dark.png"],
   "requirements": {
     "paseo": ">=0.11.2"
   },

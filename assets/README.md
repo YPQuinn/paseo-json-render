@@ -1,5 +1,11 @@
 # README artwork
 
+## Interface screenshots
+
+`preview-desktop.png` and `preview-mobile-dark.png` are real screenshots of the shared form renderer in the early development preview. The preview records submissions locally and does not connect to an agent. The screenshots show the earlier nine-component demo; version 0.2.0 provides 16 components. They document the form layout and theme, rather than the complete current feature set.
+
+## Product poster
+
 `readme-hero.png` is an illustrative product poster for Paseo JSON Render, not a screenshot of the app. It was generated with the built-in `image_gen` tool and copied into this repository. The original generation is retained outside the project.
 
 ## Generation prompt
